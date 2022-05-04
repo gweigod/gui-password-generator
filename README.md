@@ -1,3 +1,3 @@
-# password-generator
+# gui-password-generator
 
 Generate a secure password.

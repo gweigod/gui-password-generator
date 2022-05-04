@@ -4,7 +4,7 @@ import string
 import random
 import tkinter as tk
 
-version="1.1"
+version="1.2"
 title="Password Generator " + "v." + version + " ~ GweiGod"
 w=500
 h=300
@@ -27,12 +27,13 @@ def Generate(root,cvs,entry,btn,output):
         output=tk.Button(root,text=password,font=font_sm_config,command=lambda: Copy(root,cvs,password))
         output.config(border=0,cursor="hand1",bg="#000",fg="#fff")
         cvs.create_window((w/2),200,window=output)
+        print(password)
 
         btn["text"]="Exit (Esc)"
-        #clear entry number here
 
     elif (btn["text"]) == "Exit (Esc)":
         Exit(root)
+        print("Exited")
 
 def Copy(root,cvs,password):
     root.clipboard_clear()
@@ -41,6 +42,7 @@ def Copy(root,cvs,password):
     label=tk.Label(root, text="Copied to clipboard!")
     label.config(bg="#000",fg="#fff",font=font_sm_config)
     cvs.create_window(center,230,window=label)
+    print("Copied")
 
 
 
